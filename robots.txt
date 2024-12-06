@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin/
 Allow: /
 
-Sitemap: https://wedesign.one/sitemap.xml
+Sitemap: https://mid-space.one/sitemap.xml

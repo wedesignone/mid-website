@@ -1,5 +1,7 @@
 /* assets/css/styles.css */
 
+
+
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
@@ -626,3 +628,23 @@ footer p a:hover {
     color: #e76f3b;
     text-decoration: underline;
 }
+
+
+
+pre {
+    white-space: pre-wrap;       /* Allows lines to wrap */
+    word-wrap: break-word;       /* Breaks long words */
+    overflow-x: auto;            /* Enables horizontal scrolling if needed */
+    background-color: #f8f8f8;   /* Optional: Adds a light background for better readability */
+    padding: 10px;               /* Optional: Adds padding around the text */
+    border-radius: 5px;          /* Optional: Rounds the corners */
+}
+
+/* Optional: Improve readability on dark mode */
+@media (prefers-color-scheme: dark) {
+    pre {
+        background-color: #2d2d2d;
+        color: #f8f8f8;
+    }
+}
+

@@ -19,20 +19,45 @@
     <meta property="og:type" content="website">
 
     <!-- Structured Data -->
+    <!-- WebSite Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Mid-space",
-      "url": "/",
-      "description": "Mid-space: A comprehensive dataset aligning AI-generated visualizations with diverse community preferences for inclusive public spaces. Enhance urban design with our innovative AI tools.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
+        {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Mid-space",
+        "url": "https://mid-space.one/",
+        "description": "Mid-space: A comprehensive dataset aligning AI-generated visualizations with diverse community preferences for inclusive public spaces. Enhance urban design with our innovative AI tools.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://mid-space.one/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+        }
+        </script>
+        
+        <!-- Organization Schema -->
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mid Space Dataset",
+        "url": "https://mid-space.one",
+        "description": "Mid space: A comprehensive dataset aligning AI-generated visualizations with diverse community preferences for inclusive public spaces. Enhance urban design with our innovative AI tools.",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "rashidmushkani@gmail.com",
+            "contactType": "Author",
+            "areaServed": "US",
+            "availableLanguage": ["English", "French"]
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Rashid Mushkani"
+        },
+        "foundingDate": "2024-10-15"
+        }
+        </script>
+    
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">

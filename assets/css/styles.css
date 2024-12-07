@@ -127,11 +127,6 @@ header nav ul li a.active {
         display: block;
     }
 
-    /* Hide "Home" link in mobile view */
-    header nav ul li.home-link {
-        display: none;
-    }
-
     /* Style "Paper" link with icon */
     header nav ul li.paper-link a {
         display: flex;
@@ -264,7 +259,7 @@ header nav ul li a.active {
 
 .hero-image {
     flex: 1;
-    min-width: 320px;
+    min-width: 300px;
     text-align: center;
 }
 

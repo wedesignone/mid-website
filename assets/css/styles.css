@@ -68,6 +68,42 @@ header .container {
     height: auto;
 }
 
+/* Header */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0; 
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container .logo {
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-container .mila-logo {
+    max-height: 80px; 
+    width: auto;
+    height: auto;
+}
+
 /* Navigation */
 header nav ul {
     list-style: none;
@@ -94,33 +130,32 @@ header nav ul li a.active {
     color: #ff7f50;
 }
 
-/* Toggle Button (Hidden on All Screens) */
+/* Toggle Button (Hide Completely) */
 .toggle-button {
-    display: none; /* Ensure toggle button is hidden */
+    display: none;
 }
 
 /* Responsive Navigation */
 @media (max-width: 768px) {
-    /* Ensure nav ul is displayed as flex and horizontal */
+    /* Ensure nav ul is displayed as flex row */
     header nav ul {
-        flex-direction: row; /* Align navigation links horizontally */
-        background: none; /* Remove background */
-        position: static; /* Remove absolute positioning */
-        width: auto; /* Auto width */
-        display: flex; /* Always display as flex */
-        box-shadow: none; /* Remove box shadow */
-        margin-left: 15px; /* Optional: Add some left margin */
+        flex-direction: row;
+        display: flex !important; /* Force display */
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        margin-left: 15px;
     }
 
-    /* Hide the toggle button (already removed from HTML, but redundant if present) */
+    /* Hide toggle button (already removed, but reinforce) */
     .toggle-button {
-        display: none;
+        display: none !important;
     }
 
     /* Adjust navigation list items for better spacing */
     header nav ul li {
-        margin: 0 10px; /* Reduce margin for better spacing on mobile */
-        text-align: center;
+        margin: 0 10px;
     }
 
     /* Style "Paper" link with icon */
@@ -139,28 +174,10 @@ header nav ul li a.active {
 
     /* Adjust font size for better visibility */
     header nav ul li.paper-link a {
-        font-size: 1em; /* Slightly smaller font size for mobile */
+        font-size: 1em;
     }
 }
 
-@media (max-width: 768px) {
-    header .container {
-        flex-wrap: wrap; /* Allow items to wrap if necessary */
-    }
-
-    .logo-container {
-        flex: 1 1 auto; /* Allow logo container to take up available space */
-    }
-
-    header nav {
-        flex: 1 1 auto; /* Allow navigation to take up available space */
-        justify-content: flex-end; /* Align navigation links to the right */
-    }
-
-    header nav ul {
-        margin-left: auto; /* Push navigation links to the far right */
-    }
-}
 
 
 /* Hero Section */

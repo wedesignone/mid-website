@@ -639,3 +639,16 @@ pre {
     padding: 5px;               
     border-radius: 5px;          
 
+/* Optional: Add some styling for better readability */
+ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0; /* Remove default padding */
+}
+li {
+    margin-bottom: 10px; /* Space between references */
+    text-align: justify; /* Justify text for neatness */
+}
+.reference-number {
+    font-weight: bold; /* Bold the reference numbers */
+    margin-right: 5px; /* Space between number and text */
+}

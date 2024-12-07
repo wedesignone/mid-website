@@ -103,6 +103,12 @@
                     <li class="paper-link"><a href="paper.html">Paper</a></li>
                 </ul>
             </nav>
+            
+            <button class="toggle-button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+
         </div>
     </header>
 
@@ -218,13 +224,54 @@
         </div>
     </footer>
 
+    <!-- JavaScript for Toggle Functionality -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.querySelector('.toggle-button');
+            const navMenu = document.querySelector('header nav ul');
 
-    <!-- JavaScript for Navigation Toggle -->
-    <script src="assets/js/scripts.js"></script>
+            toggleButton.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        });
+
+        // JavaScript function to copy citation with enhanced notification
+        function copyCitation() {
+            var citationText = document.getElementById("apa-citation").innerText;
+            var tempTextarea = document.createElement("textarea");
+            tempTextarea.value = citationText;
+            document.body.appendChild(tempTextarea);
+            tempTextarea.select();
+            tempTextarea.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            document.body.removeChild(tempTextarea);
+            
+            // Create a temporary notification
+            var notification = document.createElement("div");
+            notification.innerText = "Citation copied to clipboard!";
+            notification.style.position = "fixed";
+            notification.style.top = "10px";
+            notification.style.right = "10px";
+            notification.style.backgroundColor = "#28a745";
+            notification.style.color = "#fff";
+            notification.style.padding = "10px 20px";
+            notification.style.borderRadius = "5px";
+            notification.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
+            notification.style.zIndex = "1000";
+            document.body.appendChild(notification);
+            
+            // Remove the notification after 3 seconds
+            setTimeout(function() {
+                document.body.removeChild(notification);
+            }, 3000);
+        }
+    </script>
+
     <!-- Initialize AOS -->
+    <script src="assets/js/scripts.js"></script>
     <script>
         AOS.init({
-            duration: 800,
+            duration: 1200,
             once: true,
         });
     </script>

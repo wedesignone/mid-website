@@ -629,8 +629,6 @@ footer p a:hover {
     text-decoration: underline;
 }
 
-
-
 pre {
     white-space: pre-wrap;      
     word-wrap: break-word;      
@@ -651,4 +649,21 @@ li {
 .reference-number {
     font-weight: bold; /* Bold the reference numbers */
     margin-right: 5px; /* Space between number and text */
+}
+
+.suggested-citation {
+    background-color: #f9f9f9; /* Light background for distinction */
+    padding: 20px;
+    margin: 30px 0;
+    border-left: 4px solid #007BFF; /* Blue accent line */
+}
+
+.suggested-citation h3 {
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.suggested-citation p {
+    font-style: italic; /* Italicize the citation for APA style */
+    color: #555555;
 }

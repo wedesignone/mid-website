@@ -31,7 +31,6 @@ body {
     overflow: hidden;
     padding: 20px 0;
 }
-
 /* Header */
 header {
     background: #ffffff;
@@ -104,27 +103,24 @@ header nav ul li a.active {
 /* Responsive Navigation */
 @media (max-width: 768px) {
     header nav ul {
-        flex-direction: column;
-        background: #fff;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        display: none;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        flex-direction: row; /* Change to row for horizontal alignment */
+        background: none; /* Remove background */
+        position: static; /* Remove absolute positioning */
+        width: auto; /* Adjust width */
+        display: flex; /* Ensure the menu is always displayed */
+        box-shadow: none; /* Remove box shadow */
+        margin-left: 15px; /* Optional: Add some left margin */
     }
 
-    header nav ul.active {
-        display: flex;
-    }
-
-    header nav ul li {
-        margin: 15px 0;
-        text-align: center;
-    }
-
+    /* Hide the toggle button on mobile */
     .toggle-button {
-        display: block;
+        display: none;
+    }
+
+    /* Adjust navigation list items for better spacing */
+    header nav ul li {
+        margin: 0 10px; /* Reduced margin for mobile */
+        text-align: center;
     }
 
     /* Style "Paper" link with icon */
@@ -143,7 +139,7 @@ header nav ul li a.active {
 
     /* Adjust font size for better visibility */
     header nav ul li.paper-link a {
-        font-size: 1.2em;
+        font-size: 1em; /* Slightly smaller font for mobile */
     }
 }
 

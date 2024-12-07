@@ -650,7 +650,8 @@ li {
     background-color: #f9f9f9; /* Light gray background */
     padding: 20px;
     margin: 30px 0;
-    border-left: 4px solid #007BFF; /* Blue accent */
+    border-left: 4px solid #007BFF; /* Blue accent line */
+    border-radius: 4px;
 }
 
 .suggested-citation h3 {
@@ -658,16 +659,28 @@ li {
     color: #333;
 }
 
+.citation-container {
+    position: relative;
+}
+
 .citation-container p {
     font-style: italic; /* Italicize the citation */
     color: #555;
+    padding-right: 30px; /* Space for the copy button */
 }
 
-.copy-button i {
+.copy-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
     color: #007BFF; /* Blue color for the icon */
     font-size: 1.2em;
 }
 
-.copy-button:hover i {
+.copy-button:hover {
     color: #0056b3; /* Darker blue on hover */
 }

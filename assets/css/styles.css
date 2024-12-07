@@ -46,6 +46,7 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px; /* Added padding for better spacing */
 }
 
 .logo-container {
@@ -72,6 +73,7 @@ header nav ul {
     list-style: none;
     display: flex;
     margin: 0;
+    padding: 0;
 }
 
 header nav ul li {
@@ -92,34 +94,32 @@ header nav ul li a.active {
     color: #ff7f50;
 }
 
-/* Toggle Button */
+/* Toggle Button (Hidden on All Screens) */
 .toggle-button {
-    display: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #333;
+    display: none; /* Ensure toggle button is hidden */
 }
 
 /* Responsive Navigation */
 @media (max-width: 768px) {
+    /* Ensure nav ul is displayed as flex and horizontal */
     header nav ul {
-        flex-direction: row; /* Change to row for horizontal alignment */
+        flex-direction: row; /* Align navigation links horizontally */
         background: none; /* Remove background */
         position: static; /* Remove absolute positioning */
-        width: auto; /* Adjust width */
-        display: flex; /* Ensure the menu is always displayed */
+        width: auto; /* Auto width */
+        display: flex; /* Always display as flex */
         box-shadow: none; /* Remove box shadow */
         margin-left: 15px; /* Optional: Add some left margin */
     }
 
-    /* Hide the toggle button on mobile */
+    /* Hide the toggle button (already removed from HTML, but redundant if present) */
     .toggle-button {
         display: none;
     }
 
     /* Adjust navigation list items for better spacing */
     header nav ul li {
-        margin: 0 10px; /* Reduced margin for mobile */
+        margin: 0 10px; /* Reduce margin for better spacing on mobile */
         text-align: center;
     }
 
@@ -139,9 +139,29 @@ header nav ul li a.active {
 
     /* Adjust font size for better visibility */
     header nav ul li.paper-link a {
-        font-size: 1em; /* Slightly smaller font for mobile */
+        font-size: 1em; /* Slightly smaller font size for mobile */
     }
 }
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap; /* Allow items to wrap if necessary */
+    }
+
+    .logo-container {
+        flex: 1 1 auto; /* Allow logo container to take up available space */
+    }
+
+    header nav {
+        flex: 1 1 auto; /* Allow navigation to take up available space */
+        justify-content: flex-end; /* Align navigation links to the right */
+    }
+
+    header nav ul {
+        margin-left: auto; /* Push navigation links to the far right */
+    }
+}
+
 
 /* Hero Section */
 .hero {

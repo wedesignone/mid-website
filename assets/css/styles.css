@@ -266,20 +266,20 @@ header nav ul li a.active {
 .hero-image img {
     width: 100%;
     max-width: 700px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 4px 4px rgba(0,0,0,0.1);
-    margin-bottom: 2px;
+    margin-bottom: 10px;
 }
 
 /* Summary Section */
 .summary {
     background: #fff;
-    padding: 15px 0;
+    padding: 20px 0;
     text-align: left;
 }
 
 .summary h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #ff7f50;
     font-size: 1.8em;
     text-align: left;
@@ -292,7 +292,7 @@ header nav ul li a.active {
     color: #555;
     font-size: 1em;
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* Visualizations Section */
